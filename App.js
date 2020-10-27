@@ -14,6 +14,7 @@ import {
   View,
   Text,
   StatusBar,
+  ImageBackground,
 } from 'react-native';
 import CodePush from 'react-native-code-push';
 
@@ -93,9 +94,9 @@ class App extends Component {
     );
   }
   render() {
-    var number1 = 1
+    var number1 = 3
     var number2 = 2
-    var result = number1 < number2 ? number2 : number1
+    var result = number1 > number2 ? number1 : number2
 
     return (
       <>
@@ -106,9 +107,11 @@ class App extends Component {
             style={styles.scrollView}>
             <View style={styles.body}>
               <View style={styles.sectionContainer}>
-                <Text style={styles.sectionTitle}>Versi 1.0.0</Text>
-                <Text style={styles.sectionDescription}>Hallo</Text>
-                <Text style={styles.sectionDescription}>if {number1} {"<"} {number2} then show {result} </Text>
+                <ImageBackground source={require('./assets/images/wishlistRibbonBlue.png')} style={styles.ribbonBlue}>
+                  <Text style={styles.sectionTitle}>Versi 1.0.0</Text>
+                </ImageBackground>
+                <Text style={styles.sectionDescription}>Test Update 2</Text>
+                <Text style={styles.sectionDescription}>if {number1} {">"} {number2} then show {result} </Text>
                 <View
                   style={{
                     height: 100,
@@ -148,7 +151,7 @@ const styles = StyleSheet.create({
     marginTop: 8,
     fontSize: 18,
     fontWeight: '400',
-    color: Colors.dark,
+    color: "#ff0000",
   },
   highlight: {
     fontWeight: '700',
@@ -160,6 +163,12 @@ const styles = StyleSheet.create({
     padding: 4,
     paddingRight: 12,
     textAlign: 'right',
+  },
+  ribbonBlue: {
+    width: (450 / 5) * 3.2,
+    height: 45,
+    justifyContent: 'center',
+    alignItems: 'center'
   },
 });
 
