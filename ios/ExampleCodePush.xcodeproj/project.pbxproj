@@ -194,7 +194,6 @@
 				D5144AC42AE1C677DEFB1E1F /* Pods-ExampleCodePush-tvOSTests.debug.xcconfig */,
 				1DD4342AC447E8481BC1AA88 /* Pods-ExampleCodePush-tvOSTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -294,6 +293,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = ZG53C734RM;
 						LastSwiftMigration = 1120;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
@@ -655,10 +655,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODEPUSH_KEY = "T6lWZ-elmshj7nLp2J44KdnOyNsK-aCnkOV3I";
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZG53C734RM;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = ExampleCodePush/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -678,9 +681,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODEPUSH_KEY = Crbza9KOALHTM_pjQtcRb4jXvTLqxELl1ww1z;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZG53C734RM;
 				INFOPLIST_FILE = ExampleCodePush/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				MARKETING_VERSION = 1.0.0;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",

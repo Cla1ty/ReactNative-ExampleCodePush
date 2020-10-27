@@ -5,6 +5,8 @@
   "scripts": {
     "android": "react-native run-android",
     "ios": "react-native run-ios --simulator='iPhone 7'",
+    "code_push_android_staging": "appcenter codepush release-react -a dwi.ariyanto-jakmall.com/ExampleCodePush-Android -d Staging",
+    "code_push_ios_staging": "appcenter codepush release-react -a dwi.ariyanto-jakmall.com/ExampleCodePush -d Staging",
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint ."
