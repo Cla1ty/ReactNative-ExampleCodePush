@@ -11,8 +11,8 @@ workflows:
                 - /usr/local/Cellar/watchman
                 - $HOME/.gradle/caches
                 - $HOME/.npm/_cacache
-                - $FCI_BUILD_DIR/android/.gradle
-                - $FCI_BUILD_DIR/android/app/build/intermediates
+                # - $FCI_BUILD_DIR/android/.gradle
+                # - $FCI_BUILD_DIR/android/app/build/intermediates
                 - $FCI_BUILD_DIR/node_modules
         triggering:
             events:
@@ -23,10 +23,10 @@ workflows:
                   source: true
             cancel_previous_builds: false 
         scripts:
-            - echo $FIREBASE_TOKEN
-            - brew unpin python@3.9
-            - brew install watchman
-#            - brew link watchman
+            # - echo $FIREBASE_TOKEN
+            # - brew unpin python@3.9
+            # - brew install watchman
+           - brew link watchman
             - echo "sdk.dir=$HOME/programs/android-sdk-macosx" > "$FCI_BUILD_DIR/android/local.properties"
             - npm install
             - |
