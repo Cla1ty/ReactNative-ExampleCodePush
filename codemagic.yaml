@@ -1,0 +1,35 @@
+# Check out https://docs.codemagic.io/getting-started/building-a-react-native-app/ for more information
+# Please review and update values in curly braces
+
+workflows:
+    react-native:
+        name: React Native App
+        environment:
+            node: latest
+        cache:
+            cache_paths:
+                - /usr/local/Cellar/watchman
+                - $HOME/.gradle/caches
+                - $HOME/.npm/_cacache
+                - $FCI_BUILD_DIR/android/.gradle
+                - $FCI_BUILD_DIR/android/app/build/intermediates
+                - $FCI_BUILD_DIR/node_modules
+        triggering:
+            events:
+                - push
+            branch_patterns:
+                - pattern: test/cicd
+                  include: true
+                  source: true
+            cancel_previous_builds: false 
+        scripts:
+             - echo $FIREBASE_TOKEN
+             - brew unpin python@3.9
+             - brew install watchman
+#            - brew link watchman
+            - echo "sdk.dir=$HOME/programs/android-sdk-macosx" > "$FCI_BUILD_DIR/android/local.properties"
+            - npm install
+            - |
+                # android build
+                cd android
+                ./gradlew assembleDebug
