@@ -26,7 +26,7 @@ workflows:
             # - echo $FIREBASE_TOKEN
             # - brew unpin python@3.9
             # - brew install watchman
-           - brew link watchman
+            - brew link watchman
             - echo "sdk.dir=$HOME/programs/android-sdk-macosx" > "$FCI_BUILD_DIR/android/local.properties"
             - npm install
             - |
